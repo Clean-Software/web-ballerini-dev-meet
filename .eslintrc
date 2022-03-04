@@ -27,7 +27,10 @@
         "react/react-in-jsx-scope": "off",
         "react/jsx-props-no-spreading": "off",
         "prettier/prettier": [
-            "error"
+            "error",
+            {
+                "endOfLine": "auto"
+            }
         ],
         "react/function-component-definition": [
             "error",
