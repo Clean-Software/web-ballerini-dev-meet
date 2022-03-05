@@ -21,14 +21,10 @@ const GlobalStyles = createGlobalStyle`
         color: ${(props) => props.theme.palette.primary.white};
     }
 
-    input, button, h1, h2, h3, h4 {
+    input, button, h1, h2, h3, h4, span, p {
         font-family: 'Epilogue', sans-serif;
     }
-
-    span, p {
-        font-family: 'Rajdhani', sans-serif;
-    }
-
+    
     a {
         color: inherit;
         text-decoration: none;
@@ -41,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
     #__next {
         max-width: 1240px;
         margin: 0 auto;
+        padding: 0 2rem;
     }
 `;
 

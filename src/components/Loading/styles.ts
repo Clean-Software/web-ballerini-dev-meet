@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const Container = styled.div`
+const Container = styled.main`
   height: 100vh;
   position: relative;
   display: flex;

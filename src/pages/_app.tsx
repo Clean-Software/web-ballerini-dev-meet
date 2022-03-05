@@ -7,7 +7,7 @@ import { defaultTheme } from "../styles/theme";
 const DevMeet = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider theme={defaultTheme}>
     <GlobalStyles />
-    <Loading isLoading>
+    <Loading isLoading={false}>
       <Component {...pageProps} />
     </Loading>
   </ThemeProvider>
