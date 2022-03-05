@@ -1,1 +1,1 @@
-admin-ballerini-dev-meet
+web-ballerini-dev-meet
