@@ -17,23 +17,24 @@ const Categories: NextPage = () => (
           <Button image={arrowRightWhiteSVG} backgroundColor={defaultTheme.palette.semantic.green} size={2} />
         </Next>
       }
-    />
-    <Content>
-      <CategoryCard selected />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-    </Content>
+    >
+      <Content>
+        <CategoryCard selected />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+        <CategoryCard />
+      </Content>
+    </AsideContainer>
   </Container>
 );
 

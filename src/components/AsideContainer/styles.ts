@@ -14,10 +14,6 @@ const Container = styled.aside`
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 100%;
     max-width: none;
-
-    span:first-child {
-      display: none !important;
-    }
   }
 `;
 
@@ -28,12 +24,12 @@ const Content = styled.div`
   align-items: flex-start;
   gap: 2.5rem;
 
-  h1 {
+  & h1 {
     font-size: 3.25rem;
     line-height: 4rem;
   }
 
-  p {
+  & p {
     font-size: 1.25rem;
     line-height: 2.5rem;
     color: ${(props) => props.theme.palette.primary.gray};
@@ -42,7 +38,7 @@ const Content = styled.div`
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     gap: 1rem;
 
-    h1 {
+    & h1 {
       font-size: 2.5rem;
     }
   }
@@ -52,6 +48,10 @@ const Footer = styled.footer`
   position: absolute;
   bottom: 2.5rem;
   left: 0;
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 100%;
+  }
 `;
 
 export { Container, Content, Footer };

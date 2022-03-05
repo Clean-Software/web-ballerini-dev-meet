@@ -5,6 +5,10 @@ const Container = styled.main`
   flex-direction: row;
   gap: 4rem;
   align-items: center;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    flex-direction: column;
+  }
 `;
 
 const Content = styled.div`
@@ -40,9 +44,9 @@ const Next = styled.div`
   gap: 2rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    p {
-      display: none;
-    }
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 `;
 

@@ -9,7 +9,7 @@ const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex-basis: 32%;
+  flex-basis: 30%;
   gap: 1rem;
   background-color: ${(props) =>
     props.selected ? props.theme.palette.primary.orange : props.theme.palette.primary.white};
@@ -24,6 +24,14 @@ const Container = styled.div<ContainerProps>`
     span {
       font-weight: bold;
     }
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    flex-basis: 48%;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    flex-basis: 100%;
   }
 `;
 

@@ -1,6 +1,6 @@
 import { logoSVG } from "@assets/index";
 import Image from "next/image";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Container, Content, Footer } from "./styles";
 
 interface AsideContainerProps {
@@ -11,17 +11,31 @@ interface AsideContainerProps {
   footer?: ReactNode;
 }
 
-const AsideContainer = ({ header, title, subtitle, children, footer }: AsideContainerProps) => (
-  <Container>
-    <Image src={logoSVG} />
-    {header}
-    <Content>
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
-    </Content>
-    {children}
-    <Footer>{footer}</Footer>
-  </Container>
-);
+const AsideContainer = ({ header, title, subtitle, children, footer }: AsideContainerProps) => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const isMobile = screenWidth < 834;
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setScreenWidth(window.innerWidth));
+
+    return () => window.removeEventListener("resize", () => setScreenWidth(window.innerWidth));
+  }, []);
+
+  return (
+    <>
+      <Container>
+        {!isMobile && <Image src={logoSVG} />}
+        {header}
+        <Content>
+          <h1>{title}</h1>
+          <p>{subtitle}</p>
+        </Content>
+        {isMobile && children}
+        <Footer>{footer}</Footer>
+      </Container>
+      {!isMobile && children}
+    </>
+  );
+};
 
 export default AsideContainer;
