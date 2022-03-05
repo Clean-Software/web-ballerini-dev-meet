@@ -28,7 +28,6 @@ const ContentTitle = styled.div`
     font-size: 4rem;
 
     span {
-      color: ${(props) => props.theme.palette.primary.orange};
       font-size: 4.5rem;
     }
   }

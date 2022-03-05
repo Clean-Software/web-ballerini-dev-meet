@@ -11,7 +11,7 @@ const Home: NextPage = () => (
   <Container>
     <ContentTitle>
       <h1>
-        Ola, Dev <span>!</span>
+        Ola, Dev <span className="orange">!</span>
       </h1>
       <p>
         Encontre o seu <span>próximo</span> evento de programação no Dev Meet, a plataforma ideal para Devs!

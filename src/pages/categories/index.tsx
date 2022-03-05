@@ -9,6 +9,8 @@ import { Container, Content, Next } from "./styles";
 const Categories: NextPage = () => (
   <Container>
     <AsideContainer
+      title="Que tipo de evento você procura ?"
+      subtitle="Selecione a categoria que mais te agrada! Lembre-se: Você poderá trocar a categoria a qualquer hora!"
       footer={
         <Next>
           <p>Abrir lista de eventos</p>

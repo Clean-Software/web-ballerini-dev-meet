@@ -34,6 +34,10 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
     }
 
+    .orange {
+        color: ${(props) => props.theme.palette.primary.orange}!important;
+    }
+
     #__next {
         max-width: 1600px;
         margin: 0 auto;
