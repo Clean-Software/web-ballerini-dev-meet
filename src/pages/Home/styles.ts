@@ -42,6 +42,12 @@ const ContentTitle = styled.div`
     word-wrap: break-word;
   }
 
+  p > span {
+    background-color: ${(props) => props.theme.palette.primary.orange};
+    color: ${(props) => props.theme.palette.primary.white};
+    padding: 0.25rem;
+  }
+
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     gap: 1rem;
     flex: 0;
@@ -66,6 +72,9 @@ const Content = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 300px;
   }
+  @media (max-height: ${(props) => props.theme.breakpoints.md}) {
+    display: none;
+  }
 `;
 
 const Next = styled.div`
@@ -79,12 +88,14 @@ const Next = styled.div`
   align-items: center;
   gap: 2rem;
 
-  @media only screen and (max-height: 740px) {
-    bottom: 1rem;
-  }
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     position: relative;
     margin-top: 2rem;
+    bottom: 1rem;
+
+    p {
+      display: none;
+    }
   }
 `;
 
