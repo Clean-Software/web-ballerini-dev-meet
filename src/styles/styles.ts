@@ -16,6 +16,11 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 
+    body {
+        background-color: ${(props) => props.theme.palette.background};
+        color: ${(props) => props.theme.palette.primary.white};
+    }
+
     input, button, h1, h2, h3, h4 {
         font-family: 'Epilogue', sans-serif;
     }
@@ -31,6 +36,11 @@ const GlobalStyles = createGlobalStyle`
 
     button {
         cursor: pointer;
+    }
+
+    #__next {
+        max-width: 1240px;
+        margin: 0 auto;
     }
 `;
 

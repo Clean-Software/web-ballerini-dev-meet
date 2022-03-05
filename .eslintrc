@@ -19,13 +19,16 @@
     "plugins": [
         "react",
         "@typescript-eslint",
-        "prettier"
+        "prettier",
+        "import"
     ],
     "rules": {
+        "import/no-unresolved": "error",
         "linebreak-style": "off",
         "import/prefer-default-export": "off",
         "react/react-in-jsx-scope": "off",
         "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off",
         "prettier/prettier": [
             "error",
             {
@@ -55,13 +58,24 @@
         ]
     },
     "settings": {
-        "import/resolver": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts",
+                ".tsx"
+            ]
+        },
+        "import/resolver":
+         {
+            "typescript": {
+                "alwaysTryTypes": true
+            },
             "node": {
                 "extensions": [
                     ".js",
                     ".jsx",
                     ".ts",
-                    ".tsx"
+                    ".tsx",
+                    ".svg"
                 ]
             }
         }
