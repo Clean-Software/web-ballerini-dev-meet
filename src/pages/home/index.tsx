@@ -1,12 +1,11 @@
+import arrowRightWhiteSVG from "@assets/icons/arrow-right.svg";
+import personSVG from "@assets/person.svg";
+import Button from "@components/Button";
+import { defaultTheme } from "@styles/theme";
 import type { NextPage } from "next";
 import Image from "next/image";
-import personSVG from "@assets/person.svg";
-
-import Button from "@components/Button";
-import arrowRightWhiteSVG from "@assets/icons/arrow-right.svg";
-import { defaultTheme } from "@styles/theme";
 import Link from "next/link";
-import { Container, ContentTitle, Content, Next } from "./styles";
+import { Container, Content, ContentTitle, Next } from "./styles";
 
 const Home: NextPage = () => (
   <Container>
@@ -23,7 +22,7 @@ const Home: NextPage = () => (
     </Content>
     <Next>
       <p>Vamos lá</p>
-      <Link href="/evento">
+      <Link href="/categories">
         <Button image={arrowRightWhiteSVG} backgroundColor={defaultTheme.palette.primary.orange} />
       </Link>
     </Next>

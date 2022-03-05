@@ -6,6 +6,7 @@ export const defaultTheme: DefaultTheme = {
       orange: "#FF5100",
       white: "#FFFFFF",
       gray: "#C6C6C6",
+      black: "#000000",
     },
     semantic: {
       green: "#04D361",

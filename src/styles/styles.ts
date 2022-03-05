@@ -35,9 +35,22 @@ const GlobalStyles = createGlobalStyle`
     }
 
     #__next {
-        max-width: 1240px;
+        max-width: 1600px;
         margin: 0 auto;
         padding: 0 2rem;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
     }
 `;
 

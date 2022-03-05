@@ -12,9 +12,9 @@ const Container = styled.button<ContainerProps>`
   padding: 1rem;
   transition: opacity 0.2s ease-in-out;
 
-  img {
-    width: ${(props) => props.size}rem;
-    height: ${(props) => props.size}rem;
+  span {
+    width: ${(props) => props.size}rem!important;
+    height: ${(props) => props.size}rem!important;
   }
 
   &:hover {

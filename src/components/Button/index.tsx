@@ -9,7 +9,7 @@ interface ButtonProps {
   children?: any;
 }
 
-const Button = ({ image, children, size = 4, ...rest }: ButtonProps) => (
+const Button = ({ image, children, size = 3, ...rest }: ButtonProps) => (
   <Container type="button" size={size} {...rest}>
     {image && <Image src={image} />}
     {children}
