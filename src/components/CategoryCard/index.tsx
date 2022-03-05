@@ -1,12 +1,19 @@
 import Image from "next/image";
-import programingDataSVG from "@assets/icons/programing-data.svg";
+import { imageDicionary } from "./helper";
 import { Container } from "./styles";
 
-const CategoryCard = () => (
-  <Container>
-    <Image src={programingDataSVG} />
+interface CategoryCardProps {
+  selected?: boolean;
+  onClick?: () => void;
+}
+
+const CategoryCard = ({ selected, onClick }: CategoryCardProps) => (
+  <Container selected={selected} onClick={onClick}>
+    <Image src={imageDicionary(selected).PROGRAMING} />
     <h2>Servidores Linux</h2>
-    <p>5 eventos encontrados</p>
+    <p>
+      <span className={!selected ? "orange" : ""}>5 eventos</span> encontrados
+    </p>
   </Container>
 );
 

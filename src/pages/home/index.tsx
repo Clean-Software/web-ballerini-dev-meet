@@ -1,5 +1,4 @@
-import arrowRightWhiteSVG from "@assets/icons/arrow-right.svg";
-import personSVG from "@assets/person.svg";
+import { arrowRightWhiteSVG, personSVG } from "@assets/index";
 import Button from "@components/Button";
 import { defaultTheme } from "@styles/theme";
 import type { NextPage } from "next";

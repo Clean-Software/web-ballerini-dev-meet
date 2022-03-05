@@ -1,4 +1,4 @@
-import logoSVG from "@assets/LOGO.svg";
+import { logoSVG } from "@assets/index";
 import Image from "next/image";
 import { ReactNode } from "react";
 import { Container, Content, Footer } from "./styles";
