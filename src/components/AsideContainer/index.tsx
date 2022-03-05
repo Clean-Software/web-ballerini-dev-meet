@@ -12,7 +12,7 @@ interface AsideContainerProps {
 }
 
 const AsideContainer = ({ header, title, subtitle, children, footer }: AsideContainerProps) => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(1000);
   const isMobile = screenWidth < 834;
 
   useEffect(() => {
