@@ -16,4 +16,11 @@ export const defaultTheme: DefaultTheme = {
     },
     background: "#282828",
   },
+  breakpoints: {
+    xs: "0px",
+    sm: "576px",
+    md: "832px",
+    lg: "992px",
+    xl: "1200px",
+  },
 };
