@@ -1,5 +1,6 @@
 import arrowRightOrangeSVG from "./icons/arrow-right-orange.svg";
 import arrowRightWhiteSVG from "./icons/arrow-right-white.svg";
+import arrowLeftSVG from "./icons/arrow-left.svg";
 import programingDataWhiteSVG from "./icons/programing-data-white.svg";
 import programingDataSVG from "./icons/programing-data.svg";
 import logoSVG from "./LOGO.svg";
@@ -14,4 +15,5 @@ export {
   arrowRightOrangeSVG,
   programingDataSVG,
   programingDataWhiteSVG,
+  arrowLeftSVG,
 };

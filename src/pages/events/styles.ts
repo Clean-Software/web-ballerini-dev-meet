@@ -11,23 +11,38 @@ const Container = styled.main`
   }
 `;
 
+const Header = styled.header`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.75rem;
+  font-family: "Epilogue", sans-serif;
+  color: ${(props) => props.theme.palette.primary.orange};
+
+  button {
+    cursor: default;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+`;
+
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  gap: 1rem;
   align-items: center;
   align-content: flex-start;
-  max-height: 50rem;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: relative;
-  flex: 1;
+  gap: 1rem;
+  overflow: auto;
+  padding-right: 1rem;
 
   &::after {
     content: "";
     display: block;
-    height: 10rem;
+    min-height: 10rem;
     width: 100%;
     position: sticky;
     bottom: -1px;
@@ -35,4 +50,4 @@ const Content = styled.div`
   }
 `;
 
-export { Container, Content };
+export { Container, Content, Header };

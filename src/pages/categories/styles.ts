@@ -18,11 +18,9 @@ const Content = styled.div`
   gap: 1rem;
   align-items: center;
   align-content: flex-start;
-  max-height: 50rem;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  justify-content: center;
+  overflow: auto;
   position: relative;
-  flex: 1;
 
   &::after {
     content: "";

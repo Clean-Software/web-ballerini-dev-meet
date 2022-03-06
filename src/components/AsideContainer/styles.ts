@@ -14,6 +14,11 @@ const Container = styled.aside`
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 100%;
     max-width: none;
+    flex-wrap: nowrap;
+  }
+
+  @media screen and (max-height: ${(props) => props.theme.breakpoints.md}) {
+    gap: 1rem;
   }
 `;
 
@@ -54,4 +59,25 @@ const Footer = styled.footer`
   }
 `;
 
-export { Container, Content, Footer };
+const ChildrenContainer = styled.div`
+  position: relative;
+  max-height: 80vh;
+  overflow: hidden;
+  flex: 1;
+
+  & > div:nth-child(2) {
+    margin-top: 3rem;
+    max-height: 80vh;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
+    max-height: none;
+    overflow: none;
+
+    & > div:nth-child(1) {
+      max-height: 100%;
+    }
+  }
+`;
+
+export { Container, Content, Footer, ChildrenContainer };
